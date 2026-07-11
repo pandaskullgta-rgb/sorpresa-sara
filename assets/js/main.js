@@ -402,10 +402,6 @@
 
 const petalos = document.getElementById("petalos");
 
-if (!petalos) {
-  alert("No se encontró el div #petalos");
-}
-
 setInterval(() => {
   const petalo = document.createElement("div");
   petalo.innerHTML = "🌹";
