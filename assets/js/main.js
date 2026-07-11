@@ -400,29 +400,33 @@
 
 })(jQuery);
 
-const petalos = document.getElementById("petalos");
+document.addEventListener("DOMContentLoaded", function () {
 
-setInterval(() => {
-  const petalo = document.createElement("div");
-  petalo.innerHTML = "🌹";
+  const petalos = document.getElementById("petalos");
 
-  petalo.style.position = "fixed";
-  petalo.style.left = Math.random() * 100 + "vw";
-  petalo.style.top = "-30px";
-  petalo.style.fontSize = (18 + Math.random() * 18) + "px";
-  petalo.style.zIndex = "9999";
-  petalo.style.pointerEvents = "none";
-  petalo.style.transition = "transform 8s linear, top 8s linear";
+  setInterval(() => {
+    const petalo = document.createElement("div");
+    petalo.innerHTML = "🌹";
 
-  petalos.appendChild(petalo);
+    petalo.style.position = "fixed";
+    petalo.style.left = Math.random() * 100 + "vw";
+    petalo.style.top = "-30px";
+    petalo.style.fontSize = (18 + Math.random() * 18) + "px";
+    petalo.style.zIndex = "9999";
+    petalo.style.pointerEvents = "none";
+    petalo.style.transition = "transform 8s linear, top 8s linear";
 
-  setTimeout(() => {
-    petalo.style.top = "110vh";
-    petalo.style.transform = "rotate(720deg)";
-  }, 10);
+    petalos.appendChild(petalo);
 
-  setTimeout(() => {
-    petalo.remove();
-  }, 8000);
+    setTimeout(() => {
+      petalo.style.top = "110vh";
+      petalo.style.transform = "rotate(720deg)";
+    }, 10);
 
-}, 700);
+    setTimeout(() => {
+      petalo.remove();
+    }, 8000);
+
+  }, 700);
+
+});
