@@ -1659,3 +1659,18 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+        a[href="#intro"] {
+  animation: brillo 2s infinite;
+}
+
+@keyframes brillo {
+  0% {
+    text-shadow: 0 0 5px #fff;
+  }
+  50% {
+    text-shadow: 0 0 20px #ff69b4, 0 0 40px #ff69b4;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff;
+  }
+}
